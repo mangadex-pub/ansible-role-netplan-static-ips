@@ -1,0 +1,18 @@
+dependencies: []
+
+galaxy_info:
+  role_name: netplan_static_ips
+  author: mangadex
+  description: Add extra IPs to interfaces using netplan
+  license: "license (MIT)"
+  min_ansible_version: "5.0"
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+        - jammy
+  galaxy_tags:
+    - system
+    - network
+    - netplan

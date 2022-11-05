@@ -1,0 +1,9 @@
+# {{ ansible_managed }} by role {{ role_name }}
+
+network:
+  version: 2
+  ethernets:
+{% for iface in (netplan_static_ips | dict2items) %}
+    "{{ iface.key }}":
+      addresses: [{{ iface.value | join(', ') }}]
+{% endfor %}

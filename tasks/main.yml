@@ -1,0 +1,12 @@
+- name: "Ensure static IPs"
+  ansible.builtin.template:
+    src: netplan-config.yaml.j2
+    dest: "/etc/netplan/{{ netplan_config_file_name }}"
+    owner: root
+    group: root
+    mode: 0644
+    force: true
+  notify: netplan apply
+
+- name: Flush handlers
+  ansible.builtin.meta: flush_handlers

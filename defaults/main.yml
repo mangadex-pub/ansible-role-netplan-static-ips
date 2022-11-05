@@ -1,0 +1,4 @@
+netplan_config_file_name: "99-netplan-static-ips.yaml"
+netplan_static_ips: {}
+# lo: [1.2.3.4/32]
+# enp0s1f2: [2.3.4.5/27]
